@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<!-- saved from url=(1182)https://d2z0o16i8xm8ak.cloudfront.net/web/direct-files/3bee484b8453b68056a88e584d885e71/3e502bf9-8768-41cd-b6a7-fbee4d7b48ca/7a81a5e5.html?response-content-disposition=attachment%3B+filename%3D%22jj_powerbi_dashboard.html%22%3B+filename%2A%3DUTF-8%27%27jj_powerbi_dashboard.html&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9kMnowbzE2aTh4bThhay5jbG91ZGZyb250Lm5ldC93ZWIvZGlyZWN0LWZpbGVzLzNiZWU0ODRiODQ1M2I2ODA1NmE4OGU1ODRkODg1ZTcxLzNlNTAyYmY5LTg3NjgtNDFjZC1iNmE3LWZiZWU0ZDdiNDhjYS83YTgxYTVlNS5odG1sP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249YXR0YWNobWVudCUzQitmaWxlbmFtZSUzRCUyMmpqX3Bvd2VyYmlfZGFzaGJvYXJkLmh0bWwlMjIlM0IrZmlsZW5hbWUlMkElM0RVVEYtOCUyNyUyN2pqX3Bvd2VyYmlfZGFzaGJvYXJkLmh0bWwqIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzgxNTMwNTM0fX19XX0_&Signature=QGd96hWNqBqO0p05r~bu4apx0vR71VvX7MbA6wtKoNgBbE48HedTWxfakjjPGbdRrkklmpA-cU26CB8fAdirqeTiJ5ad7qCeiHSo3u8j-3yvEEDSwYCCD2mOAXvS6JqvqErdo79zU-6r62kHZ-d~4XZwNhAEPBKfG7bHAe4C3~WPddvmij~BBhPCPLlSTwEwFfcT~A03yM7WH8exWovSJzEBC7tcq~hLeXA~WZyWYHCOxFszGQZAoD57PFeIVOHG~zUfZLC~MDdYqYv1Xe3eKJ4SRocbZC2RyBUzLI9hp4YRA~MxonioXnntYu990~2s6Y596fx1G85ftK9mDyzRfA__&Key-Pair-Id=K1BF7XGXAIMYNX&utm_source=perplexity -->
+<html lang="en" data-theme="light"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J&amp;J Industrial Contracting — Power BI Presentation Layer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./index_files/css2" rel="stylesheet">
+    <style>
+/* ── DESIGN TOKENS ── */
+:root,[data-theme="light"]{
+  --color-bg:#f5f6fa;
+  --color-surface:#ffffff;
+  --color-surface-2:#f9f9fc;
+  --color-surface-offset:#eef0f6;
+  --color-border:#e2e4ec;
+  --color-divider:#dde0ea;
+  --color-text:#1a1d2e;
+  --color-text-muted:#6b7085;
+  --color-text-faint:#a8acbe;
+  --color-primary:#1c6ef7;
+  --color-primary-light:#e8f0fe;
+  --color-primary-dark:#0f4dd4;
+  --color-success:#16a34a;
+  --color-success-light:#dcfce7;
+  --color-warning:#d97706;
+  --color-warning-light:#fef3c7;
+  --color-error:#dc2626;
+  --color-error-light:#fee2e2;
+  --color-won:#1c6ef7;
+  --color-lost:#dc2626;
+  --color-neutral:#6b7085;
+  --shadow-sm:0 1px 3px rgba(26,29,46,0.07);
+  --shadow-md:0 4px 12px rgba(26,29,46,0.09);
+  --shadow-lg:0 8px 24px rgba(26,29,46,0.12);
+  --radius-sm:6px;
+  --radius-md:10px;
+  --radius-lg:14px;
+  --space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;
+  --space-5:20px;--space-6:24px;--space-8:32px;--space-10:40px;
+  --font-body:'Inter',system-ui,sans-serif;
+  --text-xs:0.72rem;--text-sm:0.82rem;--text-base:0.92rem;
+  --text-lg:1.05rem;--text-xl:1.3rem;--text-2xl:1.7rem;
+  --transition:180ms cubic-bezier(0.16,1,0.3,1);
+  --sidebar-w:220px;
+}
+[data-theme="dark"]{
+  --color-bg:#13151f;
+  --color-surface:#1c1f2e;
+  --color-surface-2:#222537;
+  --color-surface-offset:#1a1d2b;
+  --color-border:#2d3050;
+  --color-divider:#242741;
+  --color-text:#e8eaf4;
+  --color-text-muted:#8a8fa8;
+  --color-text-faint:#4d5070;
+  --color-primary:#5a8cf8;
+  --color-primary-light:#1a2547;
+  --color-primary-dark:#3b6ef0;
+  --color-success:#4ade80;
+  --color-success-light:#0f2e1a;
+  --color-warning:#fbbf24;
+  --color-warning-light:#2a1f08;
+  --color-error:#f87171;
+  --color-error-light:#2d0f0f;
+  --shadow-sm:0 1px 3px rgba(0,0,0,0.25);
+  --shadow-md:0 4px 12px rgba(0,0,0,0.35);
+  --shadow-lg:0 8px 24px rgba(0,0,0,0.45);
+}
+
+/* ── BASE ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{font-size:14px;-webkit-font-smoothing:antialiased;}
+body{font-family:var(--font-body);font-size:var(--text-base);color:var(--color-text);background:var(--color-bg);display:flex;min-height:100vh;overflow-x:hidden;}
+button{cursor:pointer;background:none;border:none;font:inherit;color:inherit;}
+table{border-collapse:collapse;width:100%;}
+input,select{font:inherit;color:inherit;}
+
+/* ── SIDEBAR ── */
+.sidebar{width:var(--sidebar-w);min-height:100vh;background:var(--color-surface);border-right:1px solid var(--color-border);display:flex;flex-direction:column;position:sticky;top:0;z-index:50;transition:width var(--transition);}
+.sidebar-logo{display:flex;align-items:center;gap:var(--space-3);padding:var(--space-5) var(--space-4);border-bottom:1px solid var(--color-border);}
+.logo-mark{width:36px;height:36px;background:var(--color-primary);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.logo-mark svg{width:20px;height:20px;fill:#fff;}
+.logo-text{font-weight:700;font-size:var(--text-sm);line-height:1.25;color:var(--color-text);}
+.logo-text span{font-weight:400;color:var(--color-text-muted);}
+.sidebar-nav{flex:1;padding:var(--space-3) var(--space-2);}
+.nav-group-label{font-size:var(--text-xs);font-weight:600;color:var(--color-text-faint);text-transform:uppercase;letter-spacing:.08em;padding:var(--space-3) var(--space-3) var(--space-1);}
+.nav-item{display:flex;align-items:center;gap:var(--space-3);padding:var(--space-2) var(--space-3);border-radius:var(--radius-sm);font-size:var(--text-sm);color:var(--color-text-muted);cursor:pointer;transition:background var(--transition),color var(--transition);text-decoration:none;}
+.nav-item svg{width:16px;height:16px;flex-shrink:0;opacity:.7;}
+.nav-item:hover{background:var(--color-surface-offset);color:var(--color-text);}
+.nav-item.active{background:var(--color-primary-light);color:var(--color-primary);font-weight:500;}
+.nav-item.active svg{opacity:1;}
+.sidebar-footer{padding:var(--space-4);border-top:1px solid var(--color-border);}
+
+/* ── MAIN ── */
+.main{flex:1;display:flex;flex-direction:column;min-width:0;}
+
+/* ── TOPBAR ── */
+.topbar{height:52px;background:var(--color-surface);border-bottom:1px solid var(--color-border);display:flex;align-items:center;gap:var(--space-4);padding:0 var(--space-6);position:sticky;top:0;z-index:40;}
+.topbar-title{font-size:var(--text-base);font-weight:600;color:var(--color-text);}
+.topbar-spacer{flex:1;}
+.topbar-actions{display:flex;align-items:center;gap:var(--space-2);}
+.icon-btn{width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:var(--radius-sm);color:var(--color-text-muted);transition:background var(--transition),color var(--transition);}
+.icon-btn:hover{background:var(--color-surface-offset);color:var(--color-text);}
+.badge{display:inline-flex;align-items:center;padding:2px 8px;border-radius:var(--radius-sm);font-size:var(--text-xs);font-weight:500;}
+.badge-primary{background:var(--color-primary-light);color:var(--color-primary);}
+.badge-success{background:var(--color-success-light);color:var(--color-success);}
+.badge-warning{background:var(--color-warning-light);color:var(--color-warning);}
+.badge-error{background:var(--color-error-light);color:var(--color-error);}
+.badge-neutral{background:var(--color-surface-offset);color:var(--color-text-muted);}
+
+/* ── PAGE ── */
+.page{display:none;flex-direction:column;flex:1;}
+.page.active{display:flex;}
+.page-body{flex:1;padding:var(--space-6);display:flex;flex-direction:column;gap:var(--space-5);}
+
+/* ── FILTER BAR ── */
+.filter-bar{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--space-4) var(--space-5);display:flex;flex-wrap:wrap;gap:var(--space-5);align-items:flex-end;}
+.filter-group{display:flex;flex-direction:column;gap:var(--space-2);}
+.filter-label{font-size:var(--text-xs);font-weight:600;color:var(--color-text-muted);text-transform:uppercase;letter-spacing:.06em;}
+.filter-chips{display:flex;gap:var(--space-1);flex-wrap:wrap;}
+.chip{padding:4px 12px;border-radius:var(--radius-sm);font-size:var(--text-xs);font-weight:500;border:1px solid var(--color-border);background:var(--color-surface-2);color:var(--color-text-muted);cursor:pointer;transition:all var(--transition);}
+.chip:hover{border-color:var(--color-primary);color:var(--color-primary);}
+.chip.active{background:var(--color-primary);border-color:var(--color-primary);color:#fff;}
+.date-range{display:flex;align-items:center;gap:var(--space-2);}
+.date-input{padding:4px 10px;border:1px solid var(--color-border);border-radius:var(--radius-sm);font-size:var(--text-xs);background:var(--color-surface-2);color:var(--color-text);}
+
+/* ── KPI GRID ── */
+.kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-4);}
+.kpi-card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--space-5);box-shadow:var(--shadow-sm);}
+.kpi-label{font-size:var(--text-xs);font-weight:600;color:var(--color-text-muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:var(--space-2);}
+.kpi-value{font-size:var(--text-2xl);font-weight:700;color:var(--color-text);letter-spacing:-.02em;font-variant-numeric:tabular-nums;}
+.kpi-sub{font-size:var(--text-xs);color:var(--color-text-faint);margin-top:4px;}
+.kpi-trend{display:flex;align-items:center;gap:4px;font-size:var(--text-xs);font-weight:500;margin-top:var(--space-2);}
+.kpi-trend.up{color:var(--color-success);}
+.kpi-trend.down{color:var(--color-error);}
+
+/* ── TWO-COLUMN LAYOUT ── */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4);}
+.three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--space-4);}
+
+/* ── CARD ── */
+.card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-md);box-shadow:var(--shadow-sm);}
+.card-header{display:flex;align-items:center;justify-content:space-between;padding:var(--space-4) var(--space-5);border-bottom:1px solid var(--color-border);}
+.card-title{font-size:var(--text-sm);font-weight:600;color:var(--color-text);}
+.card-body{padding:var(--space-4) var(--space-5);}
+
+/* ── STAGE BAR CHART ── */
+.stage-list{display:flex;flex-direction:column;gap:var(--space-3);}
+.stage-row{display:flex;align-items:center;gap:var(--space-3);}
+.stage-name{width:90px;font-size:var(--text-xs);color:var(--color-text-muted);text-align:right;flex-shrink:0;}
+.stage-bar-track{flex:1;background:var(--color-surface-offset);border-radius:var(--radius-sm);height:18px;overflow:hidden;}
+.stage-bar-fill{height:100%;border-radius:var(--radius-sm);transition:width 1s cubic-bezier(0.16,1,0.3,1);display:flex;align-items:center;padding-left:8px;}
+.stage-bar-label{font-size:var(--text-xs);font-weight:600;color:#fff;white-space:nowrap;}
+.stage-count{width:28px;font-size:var(--text-xs);font-weight:600;color:var(--color-text-muted);text-align:right;}
+
+/* ── BREAKDOWN TABLE ── */
+.breakdown-table{width:100%;font-size:var(--text-xs);font-variant-numeric:tabular-nums;}
+.breakdown-table th{font-size:var(--text-xs);font-weight:600;color:var(--color-text-muted);text-transform:uppercase;letter-spacing:.05em;padding:var(--space-2) var(--space-3);background:var(--color-surface-2);text-align:left;}
+.breakdown-table td{padding:var(--space-2) var(--space-3);border-top:1px solid var(--color-divider);color:var(--color-text);}
+.breakdown-table tr:hover td{background:var(--color-surface-2);}
+.breakdown-table .won-row td{font-weight:600;}
+.breakdown-table .total-row td{font-weight:700;border-top:2px solid var(--color-border);background:var(--color-surface-2);}
+
+/* ── FORECASTING CHART ── */
+.forecast-chart{display:flex;flex-direction:column;gap:var(--space-3);}
+.forecast-axes{display:flex;gap:var(--space-3);}
+.forecast-y-axis{width:48px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-end;font-size:var(--text-xs);color:var(--color-text-faint);padding-bottom:20px;}
+.forecast-bars{flex:1;display:flex;flex-direction:column;gap:var(--space-1);}
+.forecast-grid{flex:1;position:relative;border-left:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider);}
+.grid-lines{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;pointer-events:none;}
+.grid-line{border-top:1px dashed var(--color-divider);width:100%;}
+.bar-group{display:flex;gap:4px;align-items:flex-end;padding:0 var(--space-3) var(--space-4);}
+.forecast-bar{width:40px;border-radius:var(--radius-sm) var(--radius-sm) 0 0;background:var(--color-primary);transition:height 1s cubic-bezier(0.16,1,0.3,1);}
+.forecast-bar.won{background:var(--color-primary);}
+.forecast-bar.projected{background:repeating-linear-gradient(45deg,var(--color-primary),var(--color-primary) 3px,var(--color-primary-light) 3px,var(--color-primary-light) 6px);}
+.forecast-x-label{font-size:var(--text-xs);color:var(--color-text-faint);text-align:center;}
+
+/* ── WIN/LOSS METRICS ── */
+.winloss-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-4);}
+.metric-item{text-align:center;}
+.metric-value{font-size:var(--text-xl);font-weight:700;color:var(--color-text);font-variant-numeric:tabular-nums;}
+.metric-label{font-size:var(--text-xs);color:var(--color-text-muted);margin-top:4px;line-height:1.4;}
+
+/* ── SALESPERSON TABLE ── */
+.sp-table{font-size:var(--text-xs);font-variant-numeric:tabular-nums;}
+.sp-table th{font-size:var(--text-xs);font-weight:600;color:var(--color-text-muted);text-transform:uppercase;letter-spacing:.05em;padding:var(--space-2) var(--space-3);background:var(--color-surface-2);border-bottom:1px solid var(--color-border);}
+.sp-table td{padding:var(--space-2) var(--space-3);border-top:1px solid var(--color-divider);}
+.sp-table tr:hover td{background:var(--color-surface-2);}
+.sp-table .total-row td{font-weight:700;border-top:2px solid var(--color-border);background:var(--color-surface-2);}
+.avatar{width:24px;height:24px;border-radius:50%;background:var(--color-primary-light);color:var(--color-primary);font-size:var(--text-xs);font-weight:600;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;}
+
+/* ── SALES VS REVENUE ── */
+.svr-table{font-size:var(--text-xs);font-variant-numeric:tabular-nums;}
+.svr-table th{font-size:var(--text-xs);font-weight:600;color:var(--color-text-muted);text-transform:uppercase;letter-spacing:.05em;padding:var(--space-2) var(--space-3);background:var(--color-surface-2);border-bottom:1px solid var(--color-border);}
+.svr-table td{padding:var(--space-2) var(--space-3);border-top:1px solid var(--color-divider);}
+.svr-table tr:hover td{background:var(--color-surface-2);}
+.svr-table .total-row td{font-weight:700;border-top:2px solid var(--color-border);}
+.progress-bar-inline{display:flex;align-items:center;gap:var(--space-2);}
+.progress-track-sm{flex:1;height:6px;background:var(--color-surface-offset);border-radius:var(--radius-sm);overflow:hidden;min-width:60px;}
+.progress-fill-sm{height:100%;border-radius:var(--radius-sm);background:var(--color-primary);}
+
+/* ── DONUT CHART ── */
+.donut-wrap{display:flex;align-items:center;gap:var(--space-5);}
+.donut-legend{display:flex;flex-direction:column;gap:var(--space-2);}
+.legend-item{display:flex;align-items:center;gap:var(--space-2);font-size:var(--text-xs);}
+.legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+
+/* ── SALESPERSON LIST ── */
+.sp-list{display:flex;flex-direction:column;gap:2px;}
+.sp-list-item{display:flex;align-items:center;gap:var(--space-3);padding:6px var(--space-3);border-radius:var(--radius-sm);cursor:pointer;transition:background var(--transition);}
+.sp-list-item:hover{background:var(--color-surface-offset);}
+.sp-list-item.active{background:var(--color-primary-light);}
+.sp-list-name{flex:1;font-size:var(--text-xs);font-weight:500;color:var(--color-text);}
+.sp-list-val{font-size:var(--text-xs);color:var(--color-text-muted);font-variant-numeric:tabular-nums;}
+
+/* ── TOOLTIP ── */
+.tooltip-wrap{position:relative;display:inline-block;}
+.tooltip-wrap:hover .tooltip-box{opacity:1;pointer-events:auto;transform:translateY(-2px);}
+.tooltip-box{position:absolute;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);background:var(--color-text);color:var(--color-bg);font-size:var(--text-xs);padding:4px 10px;border-radius:var(--radius-sm);white-space:nowrap;opacity:0;pointer-events:none;transition:opacity var(--transition),transform var(--transition);z-index:100;}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar{width:6px;height:6px;}
+::-webkit-scrollbar-track{background:transparent;}
+::-webkit-scrollbar-thumb{background:var(--color-divider);border-radius:var(--radius-sm);}
+</style>
+</head>
+<body>
+
+<!-- ══════ SIDEBAR ══════ -->
+<aside class="sidebar">
+  <div class="sidebar-logo">
+    <div class="logo-mark">
+      <svg viewBox="0 0 24 24"><text x="2" y="18" font-size="14" font-weight="900" font-family="Arial">JJ</text></svg>
+    </div>
+    <div class="logo-text">
+      J&amp;J Industrial<br><span>Contracting</span>
+    </div>
+  </div>
+
+  <nav class="sidebar-nav">
+    <div class="nav-group-label">Dashboards</div>
+    <a class="nav-item active" onclick="showPage(&#39;pipeline&#39;,this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg>
+      Pipeline Summary
+    </a>
+    <a class="nav-item" onclick="showPage(&#39;salesperson&#39;,this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg>
+      Salesperson Dashboard
+    </a>
+    <a class="nav-item" onclick="showPage(&#39;svr&#39;,this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="20" x2="12" y2="10"></line><line x1="18" y1="20" x2="18" y2="4"></line><line x1="6" y1="20" x2="6" y2="16"></line></svg>
+      Sales vs Revenue
+    </a>
+    <div class="nav-group-label" style="margin-top:12px;">Reports</div>
+    <a class="nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+      Stage Breakdown
+    </a>
+    <a class="nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      Win / Loss Analysis
+    </a>
+  </nav>
+
+  <div class="sidebar-footer">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div class="avatar" style="width:30px;height:30px;font-size:13px;">A</div>
+      <div style="min-width:0;">
+        <div style="font-size:var(--text-xs);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Admin User</div>
+        <div style="font-size:var(--text-xs);color:var(--color-text-faint);">Power BI Embedded</div>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<!-- ══════ MAIN ══════ -->
+<div class="main">
+
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <span class="topbar-title" id="topbar-title">Pipeline Summary</span>
+    <div class="topbar-spacer"></div>
+    <div class="topbar-actions">
+      <span style="font-size:var(--text-xs);color:var(--color-text-muted);">Date Range: 1/1/2020 – 12/31/2028</span>
+      <button class="icon-btn" onclick="toggleTheme()" title="Toggle dark mode">
+        <svg id="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
+      </button>
+      <button class="icon-btn" title="Refresh data">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 11-2.12-9.36L23 10"></path></svg>
+      </button>
+      <button class="icon-btn" title="Open in Power BI">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════
+       PAGE 1 — PIPELINE SUMMARY
+  ════════════════════════════════════════ -->
+  <div class="page active" id="page-pipeline">
+    <div class="page-body">
+
+      <!-- FILTERS -->
+      <div class="filter-bar">
+        <div class="filter-group">
+          <div class="filter-label">Project Start Month</div>
+          <div class="filter-chips" id="month-chips"><span class="chip">1</span><span class="chip">2</span><span class="chip">3</span><span class="chip">4</span><span class="chip">5</span><span class="chip active">6</span><span class="chip">7</span><span class="chip">8</span><span class="chip">9</span><span class="chip">10</span><span class="chip">11</span><span class="chip">12</span></div>
+        </div>
+        <div class="filter-group">
+          <div class="filter-label">Project Start Year</div>
+          <div class="filter-chips" id="year-chips"><span class="chip">2028</span><span class="chip">2027</span><span class="chip active">2026</span><span class="chip">2025</span><span class="chip">2024</span></div>
+        </div>
+        <div class="filter-group">
+          <div class="filter-label">Stages</div>
+          <div class="filter-chips">
+            <span class="chip active">Lead</span>
+            <span class="chip active">Budgetary</span>
+            <span class="chip active">Quote</span>
+            <span class="chip active">Negotiation</span>
+            <span class="chip">Awaiting Award</span>
+            <span class="chip active">Won</span>
+            <span class="chip">Lost</span>
+          </div>
+        </div>
+        <div class="filter-group">
+          <div class="filter-label">Project Start Quarter</div>
+          <div class="filter-chips">
+            <span class="chip active">Q1</span>
+            <span class="chip active">Q2</span>
+            <span class="chip active">Q3</span>
+            <span class="chip active">Q4</span>
+          </div>
+        </div>
+        <div class="filter-group">
+          <div class="filter-label">Date Range</div>
+          <div class="date-range">
+            <input class="date-input" type="date" value="2020-01-01">
+            <span style="color:var(--color-text-faint);">–</span>
+            <input class="date-input" type="date" value="2028-12-31">
+          </div>
+        </div>
+      </div>
+
+      <!-- KPI ROW -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-label">Total Pipeline Revenue</div>
+          <div class="kpi-value" data-count="8375">$8,375K</div>
+          <div class="kpi-trend up">
+            <svg viewBox="0 0 16 16" width="12" fill="currentColor"><path d="M8 4l5 5H3z"></path></svg>
+            All active stages included
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Total Number of Deals</div>
+          <div class="kpi-value">1</div>
+          <div class="kpi-sub">Active pipeline deals</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Weighted Pipeline Revenue</div>
+          <div class="kpi-value">$837.5K</div>
+          <div class="kpi-sub" style="display:flex;align-items:center;gap:6px;">
+            <span class="badge badge-success">Won: $8,375K</span>
+            <span style="color:var(--color-text-faint);">· 10% weight applied</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHARTS ROW -->
+      <div class="two-col">
+
+        <!-- Number of Deals per Stage -->
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">Number of Deals per Stage</span>
+            <span class="badge badge-neutral">Pipeline</span>
+          </div>
+          <div class="card-body">
+            <div class="stage-list" id="deals-per-stage"><div class="stage-row"><span class="stage-name">Lead</span>
+    <div class="stage-bar-track"><div class="stage-bar-fill" style="width:0%;background:#94a3b8;"></div></div>
+    <span class="stage-count"></span></div><div class="stage-row"><span class="stage-name">Budgetary</span>
+    <div class="stage-bar-track"><div class="stage-bar-fill" style="width:0%;background:#64748b;"></div></div>
+    <span class="stage-count"></span></div><div class="stage-row"><span class="stage-name">Quote</span>
+    <div class="stage-bar-track"><div class="stage-bar-fill" style="width:0%;background:#3b82f6;"></div></div>
+    <span class="stage-count"></span></div><div class="stage-row"><span class="stage-name">Negotiation</span>
+    <div class="stage-bar-track"><div class="stage-bar-fill" style="width:0%;background:#8b5cf6;"></div></div>
+    <span class="stage-count"></span></div><div class="stage-row"><span class="stage-name">Awaiting Award</span>
+    <div class="stage-bar-track"><div class="stage-bar-fill" style="width:0%;background:#f59e0b;"></div></div>
+    <span class="stage-count"></span></div><div class="stage-row"><span class="stage-name">Won</span>
+    <div class="stage-bar-track"><div class="stage-bar-fill" style="width:100%;background:#1c6ef7;"></div></div>
+    <span class="stage-count">1</span></div><div class="stage-row"><span class="stage-name">Lost</span>
+    <div class="stage-bar-track"><div class="stage-bar-fill" style="width:0%;background:#dc2626;"></div></div>
+    <span class="stage-count"></span></div><div class="stage-row"><span class="stage-name">Not Happening</span>
+    <div class="stage-bar-track"><div class="stage-bar-fill" style="width:0%;background:#6b7280;"></div></div>
+    <span class="stage-count"></span></div></div>
+          </div>
+        </div>
+
+        <!-- Total Revenue per Stage -->
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">Total Revenue per Stage</span>
+            <span class="badge badge-neutral">$K</span>
+          </div>
+          <div class="card-body">
+            <div class="stage-list" id="revenue-per-stage"><div class="stage-row"><span class="stage-name">Lead</span>
+    <div class="stage-bar-track"><div class="stage-bar-fill" style="width:0%;background:#94a3b8;"></div></div>
+    <span class="stage-count"></span></div><div class="stage-row"><span class="stage-name">Budgetary</span>
+    <div class="stage-bar-track"><div class="stage-bar-fill" style="width:0%;background:#64748b;"></div></div>
+    <span class="stage-count"></span></div><div class="stage-row"><span class="stage-name">Quote</span>
+    <div class="stage-bar-track"><div class="stage-bar-fill" style="width:0%;background:#3b82f6;"></div></div>
+    <span class="stage-count"></span></div><div class="stage-row"><span class="stage-name">Negotiation</span>
+    <div class="stage-bar-track"><div class="stage-bar-fill" style="width:0%;background:#8b5cf6;"></div></div>
+    <span class="stage-count"></span></div><div class="stage-row"><span class="stage-name">Awaiting Award</span>
+    <div class="stage-bar-track"><div class="stage-bar-fill" style="width:0%;background:#f59e0b;"></div></div>
+    <span class="stage-count"></span></div><div class="stage-row"><span class="stage-name">Won</span>
+    <div class="stage-bar-track"><div class="stage-bar-fill" style="width:100%;background:#1c6ef7;"><span class="stage-bar-label">$8,375</span></div></div>
+    <span class="stage-count"></span></div><div class="stage-row"><span class="stage-name">Lost</span>
+    <div class="stage-bar-track"><div class="stage-bar-fill" style="width:0%;background:#dc2626;"></div></div>
+    <span class="stage-count"></span></div><div class="stage-row"><span class="stage-name">Not Happening</span>
+    <div class="stage-bar-track"><div class="stage-bar-fill" style="width:0%;background:#6b7280;"></div></div>
+    <span class="stage-count"></span></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STAGE BREAKDOWN + FORECAST -->
+      <div class="two-col">
+
+        <!-- Stage Breakdown Table -->
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">Stage Breakdown</span>
+          </div>
+          <div class="card-body" style="padding:0;">
+            <table class="breakdown-table">
+              <thead>
+                <tr>
+                  <th>Stage</th>
+                  <th style="text-align:right;">No. of Jobs</th>
+                  <th style="text-align:right;">Total Revenue</th>
+                  <th style="text-align:right;">Weighted Revenue</th>
+                </tr>
+              </thead>
+              <tbody id="stage-breakdown-body"><tr><td>Lead</td>
+    <td style="text-align:right;"></td>
+    <td style="text-align:right;font-variant-numeric:tabular-nums;"></td>
+    <td style="text-align:right;font-variant-numeric:tabular-nums;"></td></tr><tr><td>Budgetary</td>
+    <td style="text-align:right;"></td>
+    <td style="text-align:right;font-variant-numeric:tabular-nums;"></td>
+    <td style="text-align:right;font-variant-numeric:tabular-nums;"></td></tr><tr><td>Quote</td>
+    <td style="text-align:right;"></td>
+    <td style="text-align:right;font-variant-numeric:tabular-nums;"></td>
+    <td style="text-align:right;font-variant-numeric:tabular-nums;"></td></tr><tr><td>Negotiation</td>
+    <td style="text-align:right;"></td>
+    <td style="text-align:right;font-variant-numeric:tabular-nums;"></td>
+    <td style="text-align:right;font-variant-numeric:tabular-nums;"></td></tr><tr><td>Awaiting Award</td>
+    <td style="text-align:right;"></td>
+    <td style="text-align:right;font-variant-numeric:tabular-nums;"></td>
+    <td style="text-align:right;font-variant-numeric:tabular-nums;"></td></tr><tr class="won-row"><td>Won</td>
+    <td style="text-align:right;">1</td>
+    <td style="text-align:right;font-variant-numeric:tabular-nums;">$8,375</td>
+    <td style="text-align:right;font-variant-numeric:tabular-nums;">$8,375</td></tr><tr><td>Lost</td>
+    <td style="text-align:right;"></td>
+    <td style="text-align:right;font-variant-numeric:tabular-nums;"></td>
+    <td style="text-align:right;font-variant-numeric:tabular-nums;"></td></tr><tr><td>Not Happening</td>
+    <td style="text-align:right;"></td>
+    <td style="text-align:right;font-variant-numeric:tabular-nums;"></td>
+    <td style="text-align:right;font-variant-numeric:tabular-nums;"></td></tr><tr class="total-row"><td>Total</td><td style="text-align:right;">1</td><td style="text-align:right;">$8,375</td><td style="text-align:right;">$837,500</td></tr></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Forecasting View -->
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">Forecasting View</span>
+            <div style="display:flex;gap:var(--space-2);">
+              <span style="display:flex;align-items:center;gap:4px;font-size:var(--text-xs);color:var(--color-text-muted);"><span style="width:10px;height:10px;border-radius:2px;background:var(--color-primary);display:inline-block;"></span>Won</span>
+              <span style="display:flex;align-items:center;gap:4px;font-size:var(--text-xs);color:var(--color-text-muted);"><span style="width:10px;height:10px;border-radius:2px;background:repeating-linear-gradient(45deg,var(--color-primary),var(--color-primary) 2px,var(--color-primary-light) 2px,var(--color-primary-light) 4px);display:inline-block;"></span>Projected</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div id="forecast-chart-wrap"><div style="display:flex;gap:2px;align-items:flex-end;height:160px;padding:0 4px;"><div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;">
+    <div style="display:flex;gap:1px;align-items:flex-end;height:140px;">
+      <div style="width:14px;"></div>
+      <div style="width:14px;"></div>
+    </div>
+    <span style="font-size:9px;color:var(--color-text-faint);">01</span>
+  </div><div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;">
+    <div style="display:flex;gap:1px;align-items:flex-end;height:140px;">
+      <div style="width:14px;"></div>
+      <div style="width:14px;"></div>
+    </div>
+    <span style="font-size:9px;color:var(--color-text-faint);">02</span>
+  </div><div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;">
+    <div style="display:flex;gap:1px;align-items:flex-end;height:140px;">
+      <div style="width:14px;"></div>
+      <div style="width:14px;"></div>
+    </div>
+    <span style="font-size:9px;color:var(--color-text-faint);">03</span>
+  </div><div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;">
+    <div style="display:flex;gap:1px;align-items:flex-end;height:140px;">
+      <div style="width:14px;"></div>
+      <div style="width:14px;"></div>
+    </div>
+    <span style="font-size:9px;color:var(--color-text-faint);">04</span>
+  </div><div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;">
+    <div style="display:flex;gap:1px;align-items:flex-end;height:140px;">
+      <div style="width:14px;"></div>
+      <div style="width:14px;"></div>
+    </div>
+    <span style="font-size:9px;color:var(--color-text-faint);">05</span>
+  </div><div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;">
+    <div style="display:flex;gap:1px;align-items:flex-end;height:140px;">
+      <div style="width:14px;height:140px;background:var(--color-primary);border-radius:3px 3px 0 0;"></div>
+      <div style="width:14px;"></div>
+    </div>
+    <span style="font-size:9px;color:var(--color-text-faint);">06</span>
+  </div><div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;">
+    <div style="display:flex;gap:1px;align-items:flex-end;height:140px;">
+      <div style="width:14px;"></div>
+      <div style="width:14px;height:25px;background:repeating-linear-gradient(45deg,var(--color-primary),var(--color-primary) 2px,var(--color-primary-light) 2px,var(--color-primary-light) 4px);border-radius:3px 3px 0 0;"></div>
+    </div>
+    <span style="font-size:9px;color:var(--color-text-faint);">07</span>
+  </div><div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;">
+    <div style="display:flex;gap:1px;align-items:flex-end;height:140px;">
+      <div style="width:14px;"></div>
+      <div style="width:14px;height:13px;background:repeating-linear-gradient(45deg,var(--color-primary),var(--color-primary) 2px,var(--color-primary-light) 2px,var(--color-primary-light) 4px);border-radius:3px 3px 0 0;"></div>
+    </div>
+    <span style="font-size:9px;color:var(--color-text-faint);">08</span>
+  </div><div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;">
+    <div style="display:flex;gap:1px;align-items:flex-end;height:140px;">
+      <div style="width:14px;"></div>
+      <div style="width:14px;height:33px;background:repeating-linear-gradient(45deg,var(--color-primary),var(--color-primary) 2px,var(--color-primary-light) 2px,var(--color-primary-light) 4px);border-radius:3px 3px 0 0;"></div>
+    </div>
+    <span style="font-size:9px;color:var(--color-text-faint);">09</span>
+  </div><div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;">
+    <div style="display:flex;gap:1px;align-items:flex-end;height:140px;">
+      <div style="width:14px;"></div>
+      <div style="width:14px;height:20px;background:repeating-linear-gradient(45deg,var(--color-primary),var(--color-primary) 2px,var(--color-primary-light) 2px,var(--color-primary-light) 4px);border-radius:3px 3px 0 0;"></div>
+    </div>
+    <span style="font-size:9px;color:var(--color-text-faint);">10</span>
+  </div><div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;">
+    <div style="display:flex;gap:1px;align-items:flex-end;height:140px;">
+      <div style="width:14px;"></div>
+      <div style="width:14px;height:10px;background:repeating-linear-gradient(45deg,var(--color-primary),var(--color-primary) 2px,var(--color-primary-light) 2px,var(--color-primary-light) 4px);border-radius:3px 3px 0 0;"></div>
+    </div>
+    <span style="font-size:9px;color:var(--color-text-faint);">11</span>
+  </div><div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;">
+    <div style="display:flex;gap:1px;align-items:flex-end;height:140px;">
+      <div style="width:14px;"></div>
+      <div style="width:14px;height:7px;background:repeating-linear-gradient(45deg,var(--color-primary),var(--color-primary) 2px,var(--color-primary-light) 2px,var(--color-primary-light) 4px);border-radius:3px 3px 0 0;"></div>
+    </div>
+    <span style="font-size:9px;color:var(--color-text-faint);">12</span>
+  </div></div>
+<div style="display:flex;align-items:center;gap:3px;margin-top:6px;font-size:var(--text-xs);color:var(--color-text-faint);justify-content:center;">
+  <span style="font-variant-numeric:tabular-nums;">$0.0M</span>
+  <div style="flex:1;height:1px;background:var(--color-divider);"></div>
+  <span style="font-variant-numeric:tabular-nums;">$1.0M</span>
+</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WIN/LOSS METRICS -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Win / Loss Metrics</span>
+        </div>
+        <div class="card-body">
+          <div class="winloss-grid">
+            <div class="metric-item">
+              <div class="metric-value" style="color:var(--color-success);">100.00%</div>
+              <div class="metric-label">Win Rate<br>Excl. Not Happening</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-value" style="color:var(--color-success);">100.00%</div>
+              <div class="metric-label">Win Rate<br>Incl. Not Happening</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-value">$8.375K</div>
+              <div class="metric-label">Total Won Revenue</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-value" style="color:var(--color-text-faint);">—</div>
+              <div class="metric-label">Total Lost Revenue</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════
+       PAGE 2 — SALESPERSON DASHBOARD
+  ════════════════════════════════════════ -->
+  <div class="page" id="page-salesperson">
+    <div class="page-body">
+
+      <!-- FILTERS -->
+      <div class="filter-bar">
+        <div class="filter-group">
+          <div class="filter-label">Customer</div>
+          <select class="date-input" style="width:160px;"><option>All</option><option>Vizor Solutions</option><option>Apex Retail Group</option></select>
+        </div>
+        <div class="filter-group">
+          <div class="filter-label">Salesperson</div>
+          <select class="date-input" style="width:160px;"><option>All</option><option>Amy Jambeck</option><option>Brandon Keeth</option><option>Daniel Falk</option><option>David Evans</option><option>Jamie West</option></select>
+        </div>
+        <div class="filter-group">
+          <div class="filter-label">Stages</div>
+          <div class="filter-chips">
+            <span class="chip active">All</span>
+            <span class="chip">Won</span>
+            <span class="chip">Lost</span>
+          </div>
+        </div>
+        <div class="filter-group">
+          <div class="filter-label">Project Start Date</div>
+          <div class="date-range">
+            <input class="date-input" type="date" value="2020-01-01">
+            <span style="color:var(--color-text-faint);">–</span>
+            <input class="date-input" type="date" value="2028-12-31">
+          </div>
+        </div>
+      </div>
+
+      <!-- KPI ROW -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-label">Total Pipeline Revenue</div>
+          <div class="kpi-value">$8,375K</div>
+          <div class="kpi-trend up"><svg viewBox="0 0 16 16" width="12" fill="currentColor"><path d="M8 4l5 5H3z"></path></svg> Strong win performance</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Total Number of Deals</div>
+          <div class="kpi-value">1</div>
+          <div class="kpi-sub">Across all salespersons</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Weighted Pipeline Revenue</div>
+          <div class="kpi-value">$837.5K</div>
+          <div class="kpi-sub"><span class="badge badge-success">Won Stage</span></div>
+        </div>
+      </div>
+
+      <!-- SP TABLE + SP SIDEBAR -->
+      <div style="display:grid;grid-template-columns:1fr 220px;gap:var(--space-4);">
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">Salesperson Performance</span>
+          </div>
+          <div class="card-body" style="padding:0;">
+            <table class="sp-table">
+              <thead>
+                <tr>
+                  <th>Salesperson</th>
+                  <th style="text-align:right;">Total Deals</th>
+                  <th style="text-align:right;">Total Revenue</th>
+                  <th style="text-align:right;">Weighted Revenue</th>
+                  <th>Revenue Bar</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><div style="display:flex;align-items:center;gap:8px;"><div class="avatar">V</div>Vizor Solutions</div></td>
+                  <td style="text-align:right;font-weight:600;">1</td>
+                  <td style="text-align:right;font-weight:600;">$8,375</td>
+                  <td style="text-align:right;font-weight:600;">$837,500</td>
+                  <td><div class="progress-bar-inline"><div class="progress-track-sm"><div class="progress-fill-sm" style="width:100%;"></div></div><span style="font-size:var(--text-xs);color:var(--color-text-muted);">100%</span></div></td>
+                </tr>
+                <tr>
+                  <td><div style="display:flex;align-items:center;gap:8px;"><div class="avatar" style="background:#fef3c7;color:#d97706;">A</div>Apex Retail Group</div></td>
+                  <td style="text-align:right;">1</td>
+                  <td style="text-align:right;">$8,375</td>
+                  <td style="text-align:right;">$837,500</td>
+                  <td><div class="progress-bar-inline"><div class="progress-track-sm"><div class="progress-fill-sm" style="width:100%;background:var(--color-warning);"></div></div><span style="font-size:var(--text-xs);color:var(--color-text-muted);">100%</span></div></td>
+                </tr>
+                <tr class="total-row">
+                  <td style="font-weight:700;">Total</td>
+                  <td style="text-align:right;font-weight:700;">1</td>
+                  <td style="text-align:right;font-weight:700;">$8,375</td>
+                  <td style="text-align:right;font-weight:700;">$837,500</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Salesperson List -->
+        <div class="card">
+          <div class="card-header"><span class="card-title">Salesperson</span></div>
+          <div class="card-body" style="padding:var(--space-2);">
+            <div class="sp-list" id="sp-list"><div class="sp-list-item"><div class="avatar">A</div><span class="sp-list-name">Amy Jambeck</span></div><div class="sp-list-item"><div class="avatar">B</div><span class="sp-list-name">Brandon Keeth</span></div><div class="sp-list-item"><div class="avatar">D</div><span class="sp-list-name">Daniel Falk</span></div><div class="sp-list-item"><div class="avatar">D</div><span class="sp-list-name">David Evans</span></div><div class="sp-list-item"><div class="avatar">D</div><span class="sp-list-name">Derrick Vickery</span></div><div class="sp-list-item"><div class="avatar">J</div><span class="sp-list-name">Jamie West</span></div><div class="sp-list-item"><div class="avatar">J</div><span class="sp-list-name">Jan Holdsworth</span></div><div class="sp-list-item"><div class="avatar">J</div><span class="sp-list-name">Jennifer Thomas</span></div><div class="sp-list-item"><div class="avatar">J</div><span class="sp-list-name">Jesse Krause</span></div><div class="sp-list-item"><div class="avatar">J</div><span class="sp-list-name">Josh Holdsworth</span></div><div class="sp-list-item"><div class="avatar">J</div><span class="sp-list-name">Justin Holdsworth</span></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STAGE BREAKDOWN for SP -->
+      <div class="two-col">
+        <div class="card">
+          <div class="card-header"><span class="card-title">Stage Breakdown by Salesperson</span></div>
+          <div class="card-body" style="padding:0;">
+            <table class="breakdown-table">
+              <thead>
+                <tr><th>Stage</th><th style="text-align:right;">No. of Jobs</th><th style="text-align:right;">Total Revenue</th><th style="text-align:right;">Weighted Rev.</th></tr>
+              </thead>
+              <tbody id="sp-stage-breakdown"><tr><td>Lead</td>
+    <td style="text-align:right;"></td>
+    <td style="text-align:right;"></td>
+    <td style="text-align:right;"></td></tr><tr><td>Budgetary</td>
+    <td style="text-align:right;"></td>
+    <td style="text-align:right;"></td>
+    <td style="text-align:right;"></td></tr><tr><td>Quote</td>
+    <td style="text-align:right;"></td>
+    <td style="text-align:right;"></td>
+    <td style="text-align:right;"></td></tr><tr><td>Negotiation</td>
+    <td style="text-align:right;"></td>
+    <td style="text-align:right;"></td>
+    <td style="text-align:right;"></td></tr><tr><td>Awaiting Award</td>
+    <td style="text-align:right;"></td>
+    <td style="text-align:right;"></td>
+    <td style="text-align:right;"></td></tr><tr class="won-row"><td>Won</td>
+    <td style="text-align:right;">1</td>
+    <td style="text-align:right;">$8,375</td>
+    <td style="text-align:right;">$8,375</td></tr><tr><td>Lost</td>
+    <td style="text-align:right;"></td>
+    <td style="text-align:right;"></td>
+    <td style="text-align:right;"></td></tr><tr><td>Not Happening</td>
+    <td style="text-align:right;"></td>
+    <td style="text-align:right;"></td>
+    <td style="text-align:right;"></td></tr><tr class="total-row"><td>Total</td><td style="text-align:right;">1</td><td style="text-align:right;">$8,375</td><td style="text-align:right;">$837,500</td></tr></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header"><span class="card-title">Pipeline Stage Distribution</span></div>
+          <div class="card-body" style="display:flex;justify-content:center;align-items:center;min-height:180px;">
+            <div class="donut-wrap">
+              <svg width="140" height="140" viewBox="0 0 140 140" style="flex-shrink:0;">
+                <circle cx="70" cy="70" r="50" fill="none" stroke="var(--color-surface-offset)" stroke-width="18"></circle>
+                <circle cx="70" cy="70" r="50" fill="none" stroke="var(--color-primary)" stroke-width="18" stroke-dasharray="314" stroke-dashoffset="0" stroke-linecap="round" transform="rotate(-90 70 70)" class="donut-ring" data-percent="100"></circle>
+                <text x="70" y="65" text-anchor="middle" font-size="18" font-weight="700" fill="var(--color-text)">100%</text>
+                <text x="70" y="82" text-anchor="middle" font-size="9" fill="var(--color-text-muted)">Won</text>
+              </svg>
+              <div class="donut-legend">
+                <div class="legend-item"><div class="legend-dot" style="background:var(--color-primary);"></div><span><b>Won</b> — 1 deal</span></div>
+                <div class="legend-item"><div class="legend-dot" style="background:var(--color-error);"></div><span>Lost — 0</span></div>
+                <div class="legend-item"><div class="legend-dot" style="background:var(--color-warning);"></div><span>In Progress — 0</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════
+       PAGE 3 — SALES VS REVENUE
+  ════════════════════════════════════════ -->
+  <div class="page" id="page-svr">
+    <div class="page-body">
+
+      <!-- FILTERS -->
+      <div class="filter-bar">
+        <div class="filter-group">
+          <div class="filter-label">Project Start Month</div>
+          <div class="filter-chips" id="svr-month-chips"><span class="chip">1</span><span class="chip">2</span><span class="chip">3</span><span class="chip">4</span><span class="chip">5</span><span class="chip active">6</span><span class="chip">7</span><span class="chip">8</span><span class="chip">9</span><span class="chip">10</span><span class="chip">11</span><span class="chip">12</span></div>
+        </div>
+        <div class="filter-group">
+          <div class="filter-label">Project Start Year</div>
+          <div class="filter-chips" id="svr-year-chips"><span class="chip">2028</span><span class="chip">2027</span><span class="chip active">2026</span><span class="chip">2025</span><span class="chip">2024</span></div>
+        </div>
+        <div class="filter-group">
+          <div class="filter-label">Stages</div>
+          <div class="filter-chips">
+            <span class="chip active">Lead</span>
+            <span class="chip active">Budgetary</span>
+            <span class="chip active">Quote</span>
+            <span class="chip active">Won</span>
+          </div>
+        </div>
+        <div class="filter-group">
+          <div class="filter-label">Date Range</div>
+          <div class="date-range">
+            <input class="date-input" type="date" value="2020-01-01">
+            <span style="color:var(--color-text-faint);">–</span>
+            <input class="date-input" type="date" value="2028-12-31">
+          </div>
+        </div>
+        <div class="filter-group">
+          <div class="filter-label">Salesperson</div>
+          <div class="sp-list" id="svr-sp-list" style="max-height:140px;overflow-y:auto;min-width:160px;"><div class="sp-list-item"><div class="avatar">A</div><span class="sp-list-name">Amy Jambeck</span></div><div class="sp-list-item"><div class="avatar">B</div><span class="sp-list-name">Brandon Keeth</span></div><div class="sp-list-item"><div class="avatar">D</div><span class="sp-list-name">Daniel Falk</span></div><div class="sp-list-item"><div class="avatar">D</div><span class="sp-list-name">David Evans</span></div><div class="sp-list-item"><div class="avatar">D</div><span class="sp-list-name">Derrick Vickery</span></div><div class="sp-list-item"><div class="avatar">J</div><span class="sp-list-name">Jamie West</span></div><div class="sp-list-item"><div class="avatar">J</div><span class="sp-list-name">Jan Holdsworth</span></div><div class="sp-list-item"><div class="avatar">J</div><span class="sp-list-name">Jennifer Thomas</span></div><div class="sp-list-item"><div class="avatar">J</div><span class="sp-list-name">Jesse Krause</span></div><div class="sp-list-item"><div class="avatar">J</div><span class="sp-list-name">Josh Holdsworth</span></div><div class="sp-list-item"><div class="avatar">J</div><span class="sp-list-name">Justin Holdsworth</span></div></div>
+        </div>
+      </div>
+
+      <!-- KPI ROW -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-label">Total Sales (PO Value)</div>
+          <div class="kpi-value">$8,375K</div>
+          <div class="kpi-sub">Based on won projects</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Total Revenue (Invoiced)</div>
+          <div class="kpi-value">$7.5K</div>
+          <div class="kpi-sub" style="display:flex;align-items:center;gap:6px;"><div class="progress-track-sm" style="width:80px;"><div class="progress-fill-sm" style="width:89.5%;"></div></div><span style="font-size:var(--text-xs);color:var(--color-text-muted);">89.5% billed</span></div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Remaining Bill</div>
+          <div class="kpi-value" style="color:var(--color-warning);">$875</div>
+          <div class="kpi-sub"><span class="badge badge-warning">10.5% remaining</span></div>
+        </div>
+      </div>
+
+      <!-- DETAILED TABLE -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Sales vs Revenue Detail</span>
+          <button style="display:flex;align-items:center;gap:4px;padding:4px 12px;border:1px solid var(--color-border);border-radius:var(--radius-sm);font-size:var(--text-xs);color:var(--color-text-muted);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Export CSV
+          </button>
+        </div>
+        <div class="card-body" style="padding:0;">
+          <table class="svr-table">
+            <thead>
+              <tr>
+                <th>Stage</th>
+                <th>Project No.</th>
+                <th>Name</th>
+                <th style="text-align:right;">PO Value</th>
+                <th style="text-align:right;">Invoiced Amount</th>
+                <th style="text-align:right;">Remaining Bill</th>
+                <th>Billing Progress</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="badge badge-success">Won</span></td>
+                <td style="font-variant-numeric:tabular-nums;font-weight:500;">J03600</td>
+                <td>Test Project 900</td>
+                <td style="text-align:right;font-weight:600;">$8,375</td>
+                <td style="text-align:right;">$7,500</td>
+                <td style="text-align:right;color:var(--color-warning);font-weight:600;">$875</td>
+                <td>
+                  <div class="progress-bar-inline">
+                    <div class="progress-track-sm" style="min-width:80px;">
+                      <div class="progress-fill-sm" style="width:89.5%;"></div>
+                    </div>
+                    <span style="font-size:var(--text-xs);color:var(--color-text-muted);">89.5%</span>
+                  </div>
+                </td>
+              </tr>
+              <tr class="total-row">
+                <td colspan="3" style="font-weight:700;">Total</td>
+                <td style="text-align:right;font-weight:700;">$8,375</td>
+                <td style="text-align:right;font-weight:700;">$7,500</td>
+                <td style="text-align:right;font-weight:700;color:var(--color-warning);">$875</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- VARIANCE CARD -->
+      <div class="three-col">
+        <div class="kpi-card">
+          <div class="kpi-label">Sales–Revenue Variance</div>
+          <div class="kpi-value" style="color:var(--color-warning);">$875</div>
+          <div class="kpi-sub">Unbilled amount outstanding</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Collection Rate</div>
+          <div class="kpi-value">89.5%</div>
+          <div class="kpi-sub" style="display:flex;align-items:center;gap:6px;margin-top:6px;"><div class="progress-track-sm" style="flex:1;"><div class="progress-fill-sm" style="width:89.5%;background:var(--color-success);"></div></div></div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Active Projects</div>
+          <div class="kpi-value">1</div>
+          <div class="kpi-sub"><span class="badge badge-success">Won — In Progress</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div><!-- /main -->
+
+<script>
+/* ── DATA ── */
+const stages=[
+  {name:"Lead",deals:0,rev:0,weight:0.1},
+  {name:"Budgetary",deals:0,rev:0,weight:0.2},
+  {name:"Quote",deals:0,rev:0,weight:0.4},
+  {name:"Negotiation",deals:0,rev:0,weight:0.6},
+  {name:"Awaiting Award",deals:0,rev:0,weight:0.8},
+  {name:"Won",deals:1,rev:8375,weight:1.0},
+  {name:"Lost",deals:0,rev:0,weight:0},
+  {name:"Not Happening",deals:0,rev:0,weight:0}
+];
+
+const stageColors={
+  "Lead":"#94a3b8","Budgetary":"#64748b","Quote":"#3b82f6",
+  "Negotiation":"#8b5cf6","Awaiting Award":"#f59e0b",
+  "Won":"#1c6ef7","Lost":"#dc2626","Not Happening":"#6b7280"
+};
+
+const salespersons=["Amy Jambeck","Brandon Keeth","Daniel Falk","David Evans","Derrick Vickery","Jamie West","Jan Holdsworth","Jennifer Thomas","Jesse Krause","Josh Holdsworth","Justin Holdsworth"];
+
+const forecastData=[
+  {month:"2026-01",won:0,proj:0},{month:"2026-02",won:0,proj:0},
+  {month:"2026-03",won:0,proj:0},{month:"2026-04",won:0,proj:0},
+  {month:"2026-05",won:0,proj:0},{month:"2026-06",won:837.5,proj:0},
+  {month:"2026-07",won:0,proj:150},{month:"2026-08",won:0,proj:80},
+  {month:"2026-09",won:0,proj:200},{month:"2026-10",won:0,proj:120},
+  {month:"2026-11",won:0,proj:60},{month:"2026-12",won:0,proj:40},
+];
+
+/* ── MONTH CHIPS ── */
+function buildMonthChips(containerId){
+  const c=document.getElementById(containerId);
+  if(!c)return;
+  for(let i=1;i<=12;i++){
+    const ch=document.createElement('span');
+    ch.className='chip'+(i===6?' active':'');
+    ch.textContent=i;
+    ch.onclick=()=>ch.classList.toggle('active');
+    c.appendChild(ch);
+  }
+}
+function buildYearChips(containerId){
+  const c=document.getElementById(containerId);
+  if(!c)return;
+  [2028,2027,2026,2025,2024].forEach((y,i)=>{
+    const ch=document.createElement('span');
+    ch.className='chip'+(i===2?' active':'');
+    ch.textContent=y;
+    ch.onclick=()=>ch.classList.toggle('active');
+    c.appendChild(ch);
+  });
+}
+buildMonthChips('month-chips');buildYearChips('year-chips');
+buildMonthChips('svr-month-chips');buildYearChips('svr-year-chips');
+
+/* ── DEALS PER STAGE ── */
+const maxDeals=Math.max(...stages.map(s=>s.deals),1);
+const maxRev=Math.max(...stages.map(s=>s.rev),1);
+const dealsCont=document.getElementById('deals-per-stage');
+const revCont=document.getElementById('revenue-per-stage');
+stages.forEach(s=>{
+  // deals bar
+  const r1=document.createElement('div');r1.className='stage-row';
+  r1.innerHTML=`<span class="stage-name">${s.name}</span>
+    <div class="stage-bar-track"><div class="stage-bar-fill" style="width:${s.deals/maxDeals*100}%;background:${stageColors[s.name]};"></div></div>
+    <span class="stage-count">${s.deals||''}</span>`;
+  dealsCont.appendChild(r1);
+  // revenue bar
+  const r2=document.createElement('div');r2.className='stage-row';
+  const revLabel=s.rev>0?'$'+s.rev.toLocaleString():'';
+  r2.innerHTML=`<span class="stage-name">${s.name}</span>
+    <div class="stage-bar-track"><div class="stage-bar-fill" style="width:${s.rev/maxRev*100}%;background:${stageColors[s.name]};">${s.rev>0?`<span class="stage-bar-label">${revLabel}</span>`:''}</div></div>
+    <span class="stage-count"></span>`;
+  revCont.appendChild(r2);
+});
+
+/* ── STAGE BREAKDOWN TABLE ── */
+const tbody=document.getElementById('stage-breakdown-body');
+stages.forEach(s=>{
+  const tr=document.createElement('tr');
+  if(s.name==='Won') tr.className='won-row';
+  tr.innerHTML=`<td>${s.name}</td>
+    <td style="text-align:right;">${s.deals||''}</td>
+    <td style="text-align:right;font-variant-numeric:tabular-nums;">${s.rev?'$'+s.rev.toLocaleString():''}</td>
+    <td style="text-align:right;font-variant-numeric:tabular-nums;">${s.rev?'$'+(s.rev*s.weight).toLocaleString():''}</td>`;
+  tbody.appendChild(tr);
+});
+const totalRow=document.createElement('tr');totalRow.className='total-row';
+totalRow.innerHTML=`<td>Total</td><td style="text-align:right;">1</td><td style="text-align:right;">$8,375</td><td style="text-align:right;">$837,500</td>`;
+tbody.appendChild(totalRow);
+
+/* ── SALESPERSON STAGE BREAKDOWN ── */
+const spStage=document.getElementById('sp-stage-breakdown');
+stages.forEach(s=>{
+  const tr=document.createElement('tr');
+  if(s.name==='Won') tr.className='won-row';
+  tr.innerHTML=`<td>${s.name}</td>
+    <td style="text-align:right;">${s.deals||''}</td>
+    <td style="text-align:right;">${s.rev?'$'+s.rev.toLocaleString():''}</td>
+    <td style="text-align:right;">${s.rev?'$'+(s.rev*s.weight).toLocaleString():''}</td>`;
+  spStage.appendChild(tr);
+});
+const spTotalRow=document.createElement('tr');spTotalRow.className='total-row';
+spTotalRow.innerHTML=`<td>Total</td><td style="text-align:right;">1</td><td style="text-align:right;">$8,375</td><td style="text-align:right;">$837,500</td>`;
+spStage.appendChild(spTotalRow);
+
+/* ── FORECASTING CHART ── */
+const fcWrap=document.getElementById('forecast-chart-wrap');
+const maxFc=Math.max(...forecastData.map(d=>Math.max(d.won,d.proj)),1);
+let fcHTML=`<div style="display:flex;gap:2px;align-items:flex-end;height:160px;padding:0 4px;">`;
+forecastData.forEach(d=>{
+  const wonH=Math.round((d.won/maxFc)*140);
+  const projH=Math.round((d.proj/maxFc)*140);
+  const lbl=d.month.replace('2026-','');
+  fcHTML+=`<div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;">
+    <div style="display:flex;gap:1px;align-items:flex-end;height:140px;">
+      ${wonH>0?`<div style="width:14px;height:${wonH}px;background:var(--color-primary);border-radius:3px 3px 0 0;"></div>`:'<div style="width:14px;"></div>'}
+      ${projH>0?`<div style="width:14px;height:${projH}px;background:repeating-linear-gradient(45deg,var(--color-primary),var(--color-primary) 2px,var(--color-primary-light) 2px,var(--color-primary-light) 4px);border-radius:3px 3px 0 0;"></div>`:'<div style="width:14px;"></div>'}
+    </div>
+    <span style="font-size:9px;color:var(--color-text-faint);">${lbl}</span>
+  </div>`;
+});
+fcHTML+=`</div>
+<div style="display:flex;align-items:center;gap:3px;margin-top:6px;font-size:var(--text-xs);color:var(--color-text-faint);justify-content:center;">
+  <span style="font-variant-numeric:tabular-nums;">$0.0M</span>
+  <div style="flex:1;height:1px;background:var(--color-divider);"></div>
+  <span style="font-variant-numeric:tabular-nums;">$1.0M</span>
+</div>`;
+fcWrap.innerHTML=fcHTML;
+
+/* ── SALESPERSON LIST ── */
+function buildSPList(id){
+  const cont=document.getElementById(id);
+  if(!cont)return;
+  salespersons.forEach(name=>{
+    const item=document.createElement('div');
+    item.className='sp-list-item';
+    item.innerHTML=`<div class="avatar">${name[0]}</div><span class="sp-list-name">${name}</span>`;
+    item.onclick=()=>{cont.querySelectorAll('.sp-list-item').forEach(i=>i.classList.remove('active'));item.classList.toggle('active');};
+    cont.appendChild(item);
+  });
+}
+buildSPList('sp-list');buildSPList('svr-sp-list');
+
+/* ── PAGE NAVIGATION ── */
+function showPage(page,navEl){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
+  document.getElementById('page-'+page).classList.add('active');
+  navEl.classList.add('active');
+  const titles={'pipeline':'Pipeline Summary','salesperson':'Salesperson Dashboard','svr':'Sales vs Revenue'};
+  document.getElementById('topbar-title').textContent=titles[page];
+}
+
+/* ── CHIP TOGGLE ── */
+document.querySelectorAll('.chip').forEach(ch=>ch.addEventListener('click',()=>ch.classList.toggle('active')));
+
+/* ── THEME TOGGLE ── */
+function toggleTheme(){
+  const html=document.documentElement;
+  const dark=html.getAttribute('data-theme')==='dark';
+  html.setAttribute('data-theme',dark?'light':'dark');
+  document.getElementById('theme-icon').innerHTML=dark
+    ?'<circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>'
+    :'<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+}
+</script>
+
+<div id="thunderbit-crx-side-bar" style="display:block;opacity:1;pointer-events:all;top:0;right:0;z-index:9007199254740991;position:fixed;pointer-events:none;user-select:none;"><template shadowrootmode="open"><div id="#react-app-root"><div id="#react-app-slot" style="display:flex;direction:ltr;text-align:left;unicode-bidi:isolate;font-family:Helvetica,&#39;Helvetica Neue&#39;,Arial,sans-serif,&#39;PingFang SC&#39;,&#39;Microsoft Yahei&#39;,&#39;Hiragino Sans GB&#39;,&#39;-apple-system&#39;,&#39;Inter&#39;;font-size:14px;line-height:normal;"></div></div></template></div><button id="open-side-panel" style="width:0;height:0;opacity:0;user-select:none;pointer-events:all;position:absolute;bottom:0;right:0;padding:0;border:0;outline:none;"></button></body></html>
